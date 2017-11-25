@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Scratch Emoji Shortcuts",
+  "description": "Use many more emojis on Scratch, including sounds, with :shortcuts:.",
+  "version": "1.0",
+
+"content_scripts": [
+    {
+      "matches": ["https://scratch.mit.edu/*"],
+      "js": ["emoji.js"]
+    }
+  ],
+  "icons": {"22":"logo.png"},
+  "permissions": [
+    "activeTab"
+  ]
+}
