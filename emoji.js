@@ -12,5 +12,13 @@ return "<span title=':" + emojishort + ":' class='easter-egg' style='width:22px;
 function addEmojis(code){
 return code.replace(/(:[a-zA-Z_]{3,}:)|(\/play [a-zA-Z_]{4,})/g, getEmojiCode);
 }
-for(var i = 0;i < document.getElementsByClassName("content").length;i++)
-{document.getElementsByClassName("content")[i].innerHTML = addEmojis(document.getElementsByClassName("content")[i].innerHTML)}
+function lookUpClass(c){
+for(var i = 0;i < document.getElementsByClassName(c).length;i++)
+{document.getElementsByClassName(c)[i].innerHTML = addEmojis(document.getElementsByClassName(c)[i].innerHTML)}}
+console.log("Scratch Emoji Shortcuts: Loading...");
+lookUpClass("content");// Comments
+lookUpClass("postmsg");// Forums
+lookUpClass("about");// Profile pages
+lookUpClass("info");// Project pages
+lookUpClass("gallery-info");// Studio description
+console.log("Scratch Emoji Shortcuts: Complete! :)");
