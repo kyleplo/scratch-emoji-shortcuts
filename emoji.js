@@ -6,7 +6,7 @@ return "<audio src='https://emoji-cheat-sheet.campfirenow.com/sounds/"+emoji.sli
 }else {
 var emojishort = emoji.slice(1,emoji.length - 1);
 if(emojis.indexOf(emojishort) > -1){var index = emojis.indexOf(emojishort);
-var pos = -5  + (index * 32);
+var pos = -5 - (index * 32);
 return "<span title=':" + emojishort + ":' class='easter-egg' style='width:22px;height:22px;background-image:url(https://www.webpagefx.com/tools/emoji-cheat-sheet/graphics/sprite_8f7293ea485e190c9b4e31d516dbfea8.png);background-position:" + pos + "px;float: left;margin-right: .5em;'></span>";}else{
 return emoji;}
 }}
